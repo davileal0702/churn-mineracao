@@ -141,7 +141,7 @@ def construir(nome, p):
     if nome == "Naive Bayes":
         return GaussianNB()
     return RandomForestClassifier(n_estimators=p["arvores"], max_depth=8, class_weight=pesos,
-                                  random_state=SEMENTE, n_jobs=-1)
+                                  random_state=SEMENTE, n_jobs=1)
 
 
 @st.cache_resource(show_spinner="Treinando o modelo...")
